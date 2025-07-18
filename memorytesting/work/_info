@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/de1soc/memorytesting
+vmemory_reading
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1751566527
+!i10b 1
+!s100 Q]2IQ:=lb??_?lTRhL>z43
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IB@baSdMJHbQ>VKkNZo9SH3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1751566277
+8memory_reading.sv
+Fmemory_reading.sv
+!i122 3
+L0 1 23
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1751566526.000000
+!s107 memory_reading.sv|
+!s90 -reportprogress|300|memory_reading.sv|
+!i113 1
+Z5 tCvgOpt 0
+vmemory_writing
+R1
+!s110 1751954693
+!i10b 1
+!s100 O=5[Aj<]9TZ_6jzN^6UBk2
+R2
+Im0DQ>ZWoBT1m7FN`bGTkR3
+R3
+S1
+R0
+w1751582621
+8memory_write.sv
+Fmemory_write.sv
+!i122 8
+L0 1 22
+R4
+r1
+!s85 0
+31
+!s108 1751954692.000000
+!s107 memory_write.sv|
+!s90 -reportprogress|300|memory_write.sv|
+!i113 1
+R5
+vtb_ram_1
+R1
+!s110 1751954731
+!i10b 1
+!s100 aodSd3^5oB@oK0EHWVa631
+R2
+I_R8M]zU=Nge;?]f:jd?H[3
+R3
+S1
+R0
+w1751954722
+8tb_write.sv
+Ftb_write.sv
+!i122 9
+L0 1 63
+R4
+r1
+!s85 0
+31
+!s108 1751954731.000000
+!s107 tb_write.sv|
+!s90 -reportprogress|300|tb_write.sv|
+!i113 1
+R5
+vtestbench_memory
+R1
+!s110 1751566533
+!i10b 1
+!s100 Q3dDPmR4MCE4h4ioQjE<J1
+R2
+ICCH77`8Td@I6Mf>fSI3B82
+R3
+S1
+R0
+w1751562764
+8testbench.sv
+Ftestbench.sv
+!i122 4
+L0 3 39
+R4
+r1
+!s85 0
+31
+!s108 1751566533.000000
+!s107 testbench.sv|
+!s90 -reportprogress|300|testbench.sv|
+!i113 1
+R5
