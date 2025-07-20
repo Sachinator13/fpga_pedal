@@ -4,3 +4,4 @@ module counter(
 );
 
 
+endmodule

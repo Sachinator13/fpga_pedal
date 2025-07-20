@@ -1,19 +1,19 @@
 // memory data file (do not edit the following line - required for mem load use)
 // instance=/tb_ram_1/DUT/mem
 // format=hex addressradix=h dataradix=h version=1.0 wordsperline=1 noaddress
-aa
-bb
-cc
-dd
-a1
+46
+47
+11
+12
+13
+14
 a2
-a7
-xx
-xx
-xx
-xx
-xx
-xx
-xx
-xx
-xx
+a3
+a8
+b7
+b9
+93
+15
+95
+54
+13
