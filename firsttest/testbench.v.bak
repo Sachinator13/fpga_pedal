@@ -1,0 +1,17 @@
+`timescale 1ns/1ns
+
+module test;
+	reg x;
+	wire y;
+	test bt(
+		.sw(x),
+		.LEDR(y)
+	);
+	
+	initial begin 
+		x=0;
+		repeat(8)
+			#10 x = !x;
+	end
+endmodule
+			

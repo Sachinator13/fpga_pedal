@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/de1soc/secondtest/secondtest.v
+source_file = 1, C:/de1soc/secondtest/db/secondtest.cbx.xml
+design_name = secondtest
+instance = comp, \LEDR[0]~output , LEDR[0]~output, secondtest, 1
+instance = comp, \LEDR[1]~output , LEDR[1]~output, secondtest, 1
+instance = comp, \LEDR[2]~output , LEDR[2]~output, secondtest, 1
+instance = comp, \LEDR[3]~output , LEDR[3]~output, secondtest, 1
+instance = comp, \SW[0]~input , SW[0]~input, secondtest, 1
+instance = comp, \SW[1]~input , SW[1]~input, secondtest, 1
+instance = comp, \SW[2]~input , SW[2]~input, secondtest, 1
+instance = comp, \SW[3]~input , SW[3]~input, secondtest, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, secondtest, 1

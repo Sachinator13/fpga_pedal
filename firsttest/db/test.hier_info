@@ -1,0 +1,8 @@
+|testbench
+
+
+|testbench|test:bt
+SW[0] => LEDR[0].DATAIN
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
