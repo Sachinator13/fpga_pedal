@@ -1,6 +1,6 @@
 module counter(
 	input clk,
-	output [3:0] count
+	output [15:0] count
 );
 
 

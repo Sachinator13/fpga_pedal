@@ -1,7 +1,7 @@
 module memory_writing(
 	input clk,
 	input we,
-	input [3:0] addr,
+	input [15:0] addr,
 	input [7:0] din,
 	output reg [7:0] dout
 );
@@ -9,7 +9,9 @@ module memory_writing(
 reg [7:0] mem [0:15];
 
 initial begin
+
     $readmemh("data.mem", mem);
+
 end
 
 

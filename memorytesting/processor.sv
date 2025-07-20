@@ -9,5 +9,10 @@ always @(posedge clk) begin
 end
 
 
-
 endmodule
+
+
+
+// 1 cycle process, thefore we delaye dteh write address by 1.
+
+//n cycle process delays write address by n
