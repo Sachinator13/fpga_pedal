@@ -1,52 +1,102 @@
 module tb_ram_1;
 
 reg clk = 0;
-reg we;
-reg [3:0] addr;
-reg [7:0] din;
-wire [7:0] dout;
+reg we_write;
+reg we_read;
+reg [15:0] addr_w;
+reg [15:0] addr_r;
+reg [15:0] next_addr_r;
+reg [15:0] next_addr_w;
+reg [15:0] din_w;
+reg [15:0] din_r;
+wire [15:0] dout_w;
+wire [15:0] dout_r;
+reg [15:0] counter;
+wire [15:0] proc_output;
+reg [15:0] prev_dout;
 
+reg [15:0] addr_pipe [0:1];     // Pipe depth = 2
+reg      we_pipe   [0:1];
 
 //insantiate ram
 
+counter count1 (
+	.clk(clk),
+	.count(counter)
+);
+
+memory_writing READ (
+	.clk(clk),
+	.addr(addr_r),
+	.we(we_read),
+	.din(din_r),
+	.dout(dout_r)
+);
+
 memory_writing DUT (
     .clk(clk),
-    .we(we),
-    .addr(addr),
-    .din(din),
-    .dout(dout)
+    .we(we_write),
+    .addr(next_addr_w),
+    .din(proc_output),
+    .dout(dout_w)
 );
+
+processor thingy (
+	.clk(clk),
+	.y(dout_r),
+	.x(proc_output)
+
+);
+
+
+
 
 always #5 clk = ~clk;
 
 //test sequence
 
 
-initial begin
+always @(posedge clk) begin 
+	addr_r <= addr_r + 1'b1;
+	addr_w <= addr_r;
+	next_addr_w <= addr_w;
+	//depending on the delay of the processor, adjust the numbe ro fdelayed cycles here	
 
-	we = 0;
-	addr = 0;
-	din = 0;
-	
-	#10s
-	//writing to addresses 1 and 3
-	we = 1;
-	
-   addr = 0; din = 8'hAA; #10;  // Write 0xAA
-   addr = 1; din = 8'hBB; #10;  // Write 0xBB
-   addr = 2; din = 8'hCC; #10;  // Write 0xCC
-   addr = 3; din = 8'hDD; #10;  // Write 0xDD
-	
-	we = 0;
-   addr = 0; #10;   // Read addr 0
-   addr = 1; #10;   // Read addr 1
-   addr = 2; #10;   // Read addr 2
-   addr = 3; #10;   // Read addr 3
-	
-	$writememh("output.mem", DUT.mem);
-	$finish;
-	
 end
 
+initial begin
+
+	we_read =1'b0;
+	we_write = 1'b1;
+	addr_r =1'b0;
+	addr_w = 1'b0;
+
+	#3000
+
+	$writememh("output.mem", DUT.mem);
+	$finish;
+
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 endmodule
-	

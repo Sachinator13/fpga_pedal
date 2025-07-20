@@ -7,13 +7,15 @@ reg [15:0] addr_w;
 reg [15:0] addr_r;
 reg [15:0] next_addr_r;
 reg [15:0] next_addr_w;
-reg [7:0] din_w;
-reg [7:0] din_r;
-wire [7:0] dout_w;
-wire [7:0] dout_r;
+reg [15:0] next_addr_w_2;
+reg [15:0] din_w;
+reg [15:0] din_r;
+wire [15:0] dout_w;
+wire [15:0] dout_r;
 reg [15:0] counter;
-wire [7:0] proc_output;
-reg [7:0] prev_dout;
+wire [15:0] proc_output1;
+wire [15:0] proc_output2;
+reg [15:0] prev_dout;
 
 reg [15:0] addr_pipe [0:1];     // Pipe depth = 2
 reg      we_pipe   [0:1];
@@ -36,19 +38,22 @@ memory_writing READ (
 memory_writing DUT (
     .clk(clk),
     .we(we_write),
-    .addr(next_addr_w),
-    .din(proc_output),
+    .addr(next_addr_w_2),
+    .din(proc_output2),
     .dout(dout_w)
 );
 
-processor thingy (
+processor mod1 (
 	.clk(clk),
-	.y(dout_r),
-	.x(proc_output)
-
+	.input_sig(dout_r),
+	.output_sig(proc_output1)
 );
 
-
+processor mod2(
+	.clk(clk),
+	.input_sig(proc_output1),
+	.output_sig(proc_output2)
+);
 
 
 always #5 clk = ~clk;
@@ -60,7 +65,8 @@ always @(posedge clk) begin
 	addr_r <= addr_r + 1'b1;
 	addr_w <= addr_r;
 	next_addr_w <= addr_w;
-	
+	next_addr_w_2 <= next_addr_w;
+	//depending on the delay of the processor, adjust the numbe ro fdelayed cycles here	
 
 end
 
@@ -71,7 +77,7 @@ initial begin
 	addr_r =1'b0;
 	addr_w = 1'b0;
 
-	#300
+	#3000
 
 	$writememh("output.mem", DUT.mem);
 	$finish;
