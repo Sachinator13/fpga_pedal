@@ -17,8 +17,6 @@ wire [15:0] proc_output1;
 wire [15:0] proc_output2;
 reg [15:0] prev_dout;
 
-reg [15:0] addr_pipe [0:1];     // Pipe depth = 2
-reg      we_pipe   [0:1];
 
 //insantiate ram
 
@@ -84,23 +82,6 @@ initial begin
 
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
