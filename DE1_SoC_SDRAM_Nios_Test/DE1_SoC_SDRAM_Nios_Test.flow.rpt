@@ -1,5 +1,5 @@
 Flow report for DE1_SoC_SDRAM_Nios_Test
-Tue Aug 19 14:34:59 2025
+Tue Aug 19 16:51:23 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Aug 19 14:34:49 2025       ;
+; Flow Status                     ; Successful - Tue Aug 19 16:51:15 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC_SDRAM_Nios_Test                     ;
 ; Top-level Entity Name           ; DE1_SoC_SDRAM_Nios_Test                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,376 / 32,070 ( 4 % )                      ;
-; Total registers                 ; 2198                                        ;
+; Logic utilization (in ALMs)     ; 1,397 / 32,070 ( 4 % )                      ;
+; Total registers                 ; 2219                                        ;
 ; Total pins                      ; 241 / 457 ( 53 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,036,416 / 4,065,280 ( 25 % )              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+-------------------------+
 ; Option            ; Setting                 ;
 +-------------------+-------------------------+
-; Start date & time ; 08/19/2025 14:31:37     ;
+; Start date & time ; 08/19/2025 16:48:31     ;
 ; Main task         ; Compilation             ;
 ; Revision Name     ; DE1_SoC_SDRAM_Nios_Test ;
 +-------------------+-------------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
 ; Assignment Name                                   ; Value                                                          ; Default Value ; Entity Name  ; Section Id ;
 +---------------------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 231273227125823.175561029722872                                ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID                             ; 231273227125823.175561851129588                                ; --            ; --           ; --         ;
 ; FITTER_EFFORT                                     ; Standard Fit                                                   ; Auto Fit      ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                            ; 85                                                             ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                            ; 0                                                              ; --            ; --           ; --         ;
@@ -114,11 +114,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 5079 MB             ; 00:00:46                           ;
-; Fitter               ; 00:02:22     ; 1.2                     ; 8165 MB             ; 00:11:59                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 4906 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:09     ; 2.6                     ; 5561 MB             ; 00:00:18                           ;
-; Total                ; 00:03:16     ; --                      ; --                  ; 00:13:09                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 5088 MB             ; 00:00:32                           ;
+; Fitter               ; 00:02:16     ; 1.2                     ; 8160 MB             ; 00:10:41                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4911 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:07     ; 2.7                     ; 5563 MB             ; 00:00:16                           ;
+; Total                ; 00:02:47     ; --                      ; --                  ; 00:11:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

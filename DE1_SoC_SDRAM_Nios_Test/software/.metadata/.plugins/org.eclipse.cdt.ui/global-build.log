@@ -1,4 +1,4 @@
-14:26:02 **** Build of configuration Nios II for project sdram_nios_v3 ****
+16:49:42 **** Build of configuration Nios II for project sdram_nios_v3 ****
 wsl make all 
 Info: Building /mnt/c/repos/fpga_pedal/DE1_SoC_SDRAM_Nios_Test/software/sdram_nios_v3_bsp/
 make --no-print-directory -C /mnt/c/repos/fpga_pedal/DE1_SoC_SDRAM_Nios_Test/software/sdram_nios_v3_bsp/
@@ -13,16 +13,19 @@ main.c: In function 'main':
 main.c:53:17: warning: initialization of 'alt_u32' {aka 'long unsigned int'} from 'alt_u32 *' {aka 'long unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
    53 |  alt_u32 pDes = (alt_u32 *)BaseAddr;
       |                 ^
-main.c:101:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-  101 |         if(pressed = TRUE){
-      |            ^~~~~~~
-main.c:104:35: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
-  104 |          printf("read back = 0x%08X\n", value);
-      |                                ~~~^     ~~~~~
-      |                                   |     |
-      |                                   |     alt_u32 {aka long unsigned int}
-      |                                   unsigned int
-      |                                %08lX
+main.c:68:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   68 |   printf("read back = 0x%8X\n", value);
+      |                         ~~^     ~~~~~
+      |                           |     |
+      |                           |     alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                         %8lX
+main.c:52:15: warning: unused variable 'ButtonMask' [-Wunused-variable]
+   52 |  const alt_u8 ButtonMask = 0x0F; // 4 button
+      |               ^~~~~~~~~~
+main.c:50:16: warning: unused variable 'ButtonStatus' [-Wunused-variable]
+   50 |  alt_u8 Status,ButtonStatus;
+      |                ^~~~~~~~~~~~
 main.c:50:9: warning: unused variable 'Status' [-Wunused-variable]
    50 |  alt_u8 Status,ButtonStatus;
       |         ^~~~~~
@@ -38,13 +41,16 @@ main.c:48:7: warning: unused variable 'bShowMessage' [-Wunused-variable]
 main.c:47:10: warning: unused variable 'InitValue' [-Wunused-variable]
    47 |  alt_u32 InitValue = 0x01;
       |          ^~~~~~~~~
-main.c:46:6: warning: variable 'TestIndex' set but not used [-Wunused-but-set-variable]
+main.c:46:6: warning: unused variable 'TestIndex' [-Wunused-variable]
    46 |  int TestIndex ;
       |      ^~~~~~~~~
-main.c:44:14: warning: variable 'bLoop' set but not used [-Wunused-but-set-variable]
+main.c:45:7: warning: unused variable 'pressed' [-Wunused-variable]
+   45 |  bool pressed = FALSE;
+      |       ^~~~~~~
+main.c:44:14: warning: unused variable 'bLoop' [-Wunused-variable]
    44 |  bool bPass, bLoop;
       |              ^~~~~
-main.c:44:7: warning: variable 'bPass' set but not used [-Wunused-but-set-variable]
+main.c:44:7: warning: unused variable 'bPass' [-Wunused-variable]
    44 |  bool bPass, bLoop;
       |       ^~~~~
 Info: Compiling mem_verify.c to obj/default/mem_verify.o
@@ -57,13 +63,13 @@ Info:                     65526 KBytes free for stack + heap.
 Info: Creating sdram_nios_v3.objdump
 nios2-elf-objdump.exe --disassemble --syms --all-header --source sdram_nios_v3.elf >sdram_nios_v3.objdump
 [sdram_nios_v3 build complete]
-14:37:18 **** Build of configuration Nios II for project sdram_nios_v3 ****
+16:52:07 **** Build of configuration Nios II for project sdram_nios_v3 ****
 wsl make all 
 Info: Building /mnt/c/repos/fpga_pedal/DE1_SoC_SDRAM_Nios_Test/software/sdram_nios_v3_bsp/
 make --no-print-directory -C /mnt/c/repos/fpga_pedal/DE1_SoC_SDRAM_Nios_Test/software/sdram_nios_v3_bsp/
 [BSP build complete]
 [sdram_nios_v3 build complete]
-14:37:35 **** Incremental Build of configuration Nios II for project sdram_nios_v3 ****
+16:52:08 **** Incremental Build of configuration Nios II for project sdram_nios_v3 ****
 wsl make all 
 Info: Building /mnt/c/repos/fpga_pedal/DE1_SoC_SDRAM_Nios_Test/software/sdram_nios_v3_bsp/
 make --no-print-directory -C /mnt/c/repos/fpga_pedal/DE1_SoC_SDRAM_Nios_Test/software/sdram_nios_v3_bsp/

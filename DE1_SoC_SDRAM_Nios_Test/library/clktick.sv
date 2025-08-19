@@ -1,5 +1,5 @@
 module clktick #(
-	parameter WIDTH = 16
+	parameter WIDTH = 30
 )(
   // interface signals
   input  logic             clk,      // clock 
