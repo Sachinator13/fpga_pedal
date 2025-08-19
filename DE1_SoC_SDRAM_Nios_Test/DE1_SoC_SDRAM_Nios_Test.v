@@ -198,11 +198,12 @@ module DE1_SoC_SDRAM_Nios_Test(
 );
 
 
-reg [15:0] input_data;
-reg [15:0] data_to_cpu;
-reg clkdiv50;
-reg readfull;
-reg writefull;
+wire [15:0] input_data;
+wire [15:0] data_to_cpu;
+wire clkdiv50;
+wire readfull;
+wire writefull;
+wire read;
 
 
 
@@ -249,7 +250,7 @@ datafeed feeding(
 
 
 fullfsm fsm(
-	.clk(clk),
+	.clk(CLOCK_50),
 	.full(writefull),
 	.read(read)
 );

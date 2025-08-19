@@ -23,7 +23,7 @@ always_comb
 	
 always_comb
 	case(current)
-		waiitng: read = 1'b0;
+		waiting: read = 1'b0;
 		reading: read = 1'b1;
 	endcase
 	

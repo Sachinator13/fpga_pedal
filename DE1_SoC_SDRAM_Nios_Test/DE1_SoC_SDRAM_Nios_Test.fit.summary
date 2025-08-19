@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Aug 18 19:23:20 2025
+Fitter Status : Successful - Tue Aug 19 14:34:35 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : DE1_SoC_SDRAM_Nios_Test
 Top-level Entity Name : DE1_SoC_SDRAM_Nios_Test
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1,308 / 32,070 ( 4 % )
-Total registers : 2006
+Logic utilization (in ALMs) : 1,376 / 32,070 ( 4 % )
+Total registers : 2198
 Total pins : 241 / 457 ( 53 % )
 Total virtual pins : 0
-Total block memory bits : 1,035,392 / 4,065,280 ( 25 % )
-Total RAM Blocks : 134 / 397 ( 34 % )
+Total block memory bits : 1,036,416 / 4,065,280 ( 25 % )
+Total RAM Blocks : 135 / 397 ( 34 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
